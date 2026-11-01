@@ -1,0 +1,16 @@
+crop_id,name_en,name_hi,in_ml_model,has_dose,potato_blight
+rice,Rice (paddy),धान,true,true,false
+wheat,Wheat,गेहूं,false,true,false
+maize,Maize,मक्का,true,true,false
+potato,Potato,आलू,false,true,true
+mustard,Mustard,सरसों,false,true,false
+lentil,Lentil (masur),मसूर,true,true,false
+chickpea,Chickpea (gram),चना,true,true,false
+pigeonpeas,Pigeon pea (arhar),अरहर,true,true,false
+blackgram,Black gram (urad),उड़द,true,false,false
+mungbean,Mung bean (moong),मूंग,true,false,false
+jute,Jute,जूट,true,false,false
+barley,Barley,जौ,false,false,false
+banana,Banana,केला,true,false,false
+mango,Mango,आम,true,false,false
+papaya,Papaya,पपीता,true,false,false

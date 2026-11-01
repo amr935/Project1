@@ -1,0 +1,77 @@
+[app]
+name = "KrishiSahayak"
+default_language = "en"          # "en" or "hi"
+timezone = "Asia/Kolkata"
+
+[features]
+crop_advisor = true
+risk_map = true
+leaf_scanner = false             # optional Phase 11; stays false unless model file exists
+
+[weather]
+forecast_url = "https://api.open-meteo.com/v1/forecast"
+archive_url = "https://archive-api.open-meteo.com/v1/archive"
+hourly_vars = ["temperature_2m", "relative_humidity_2m", "precipitation", "precipitation_probability", "wind_speed_10m"]
+daily_vars = ["temperature_2m_max", "temperature_2m_min", "precipitation_sum"]
+past_days = 7
+forecast_days = 8
+timeout_seconds = 10
+retries = 2
+cache_ttl_seconds = 10800        # 3 hours: reuse live data this long
+max_cache_age_hours = 72         # older cache is shown with a "stale" warning
+
+[blight]
+rh_threshold = 90.0              # % relative humidity, inclusive (>=)   VERIFY in ICAR paper
+rh_hours_required = 105          # hours in window                       VERIFY
+t_min = 7.2                      # °C inclusive                          VERIFY
+t_max = 26.6                     # °C inclusive                          VERIFY
+t_hours_required = 150           # hours in window                       VERIFY
+window_hours = 168               # 7 days
+yellow_fraction = 0.7            # both conditions at >= 70% → YELLOW
+max_missing_fraction = 0.10      # >10% missing hours in window → NO_DATA
+season_months = [10, 11, 12, 1, 2, 3]
+
+[spray]
+rain_mm_24h_max = 1.0            # below this total in next 24 h = dry
+rain_prob_max = 60               # % ; ignored if probability is missing
+wind_kmh_max = 15.0
+day_start_hour = 6               # only suggest spraying between 06:00
+day_end_hour = 17                # and 17:00 (start hour)
+search_days = 7
+
+[fertilizer]
+adjust_pct = 25
+urea_n = 0.46
+dap_n = 0.18
+dap_p2o5 = 0.46
+mop_k2o = 0.60
+urea_bag_kg = 45                 # VERIFY locally
+dap_bag_kg = 50                  # VERIFY locally
+mop_bag_kg = 50                  # VERIFY locally
+
+[fertilizer.soil_limits]         # Soil Health Card ratings, kg/ha
+N_low_below = 280                # < 280 low; 280–560 medium; > 560 high
+N_high_above = 560
+P_low_below = 10                 # < 10 low; 10–25 medium; > 25 high
+P_high_above = 25
+K_low_below = 120                # < 120 low; 120–280 medium; > 280 high
+K_high_above = 280
+
+[ph]
+valid_min = 3.0
+valid_max = 10.0
+lime_below = 5.5
+alkaline_above = 8.5
+
+[area]
+min_ha = 0.01
+max_ha = 50.0
+acre_ha = 0.404686
+bigha_ha = 0.2529                # Bihar standard bigha; VARIES locally — VERIFY
+
+[crop]
+features = ["N", "P", "K", "temperature", "humidity", "ph", "rainfall"]
+allowed = ["rice", "maize", "chickpea", "lentil", "pigeonpeas", "blackgram", "mungbean", "jute", "banana", "mango", "papaya"]
+top_k = 3
+min_confidence = 0.05            # below this (after filtering) → "no confident match"
+default_rainfall_mm = 100

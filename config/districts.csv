@@ -1,0 +1,21 @@
+district_id,name_en,name_hi,state,lat,lon
+patna,Patna,पटना,Bihar,25.594,85.137
+nalanda,Nalanda,नालंदा,Bihar,25.197,85.523
+gaya,Gaya,गया,Bihar,24.796,85.008
+muzaffarpur,Muzaffarpur,मुज़फ़्फ़रपुर,Bihar,26.120,85.390
+bhagalpur,Bhagalpur,भागलपुर,Bihar,25.244,86.972
+darbhanga,Darbhanga,दरभंगा,Bihar,26.152,85.897
+purnia,Purnia,पूर्णिया,Bihar,25.778,87.475
+samastipur,Samastipur,समस्तीपुर,Bihar,25.863,85.781
+begusarai,Begusarai,बेगूसराय,Bihar,25.418,86.130
+bhojpur,Bhojpur,भोजपुर,Bihar,25.556,84.663
+ranchi,Ranchi,रांची,Jharkhand,23.344,85.310
+dhanbad,Dhanbad,धनबाद,Jharkhand,23.796,86.430
+east_singhbhum,East Singhbhum,पूर्वी सिंहभूम,Jharkhand,22.805,86.203
+bokaro,Bokaro,बोकारो,Jharkhand,23.669,86.151
+hazaribagh,Hazaribagh,हज़ारीबाग,Jharkhand,23.992,85.362
+deoghar,Deoghar,देवघर,Jharkhand,24.482,86.700
+dumka,Dumka,दुमका,Jharkhand,24.268,87.249
+palamu,Palamu,पलामू,Jharkhand,24.033,84.067
+giridih,Giridih,गिरिडीह,Jharkhand,24.190,86.300
+gumla,Gumla,गुमला,Jharkhand,23.044,84.541

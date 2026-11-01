@@ -1,0 +1,9 @@
+crop_id,n_kg_ha,p2o5_kg_ha,k2o_kg_ha,verified,source
+wheat,120,60,40,false,
+rice,100,50,50,false,
+maize,120,60,40,false,
+potato,150,80,100,false,
+mustard,80,40,40,false,
+lentil,20,40,20,false,
+chickpea,20,40,20,false,
+pigeonpeas,20,45,20,false,

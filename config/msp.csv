@@ -1,0 +1,6 @@
+crop_id,marketing_year,msp_rs_q,cost_rs_q,margin_pct,verified,source
+wheat,2027-28,2610,1264,106,false,news report 30 Sep 2026
+barley,2027-28,2286,1447,58,false,news report 30 Sep 2026
+chickpea,2027-28,5958,3751,59,false,news report 30 Sep 2026
+lentil,2027-28,7390,3854,92,false,news report 30 Sep 2026
+mustard,2027-28,6613,3367,96,false,news report 30 Sep 2026
